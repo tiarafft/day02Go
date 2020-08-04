@@ -7,9 +7,6 @@ import (
 )
 
 
-type Hitung struct {
-	No1, No2 int
-}
 
 type Count struct {
 	No1, No2 int
@@ -25,13 +22,13 @@ func main() {
 	fmt.Println("2. Bagi")
 	fmt.Println("3. Tambah ")
 	fmt.Println("4. Kurang ")
-/*	fmt.Println("5. Akar")
+	fmt.Println("5. Akar")
 	fmt.Println("6. Pangkat")
 	fmt.Println("7. Luas Persegi")
 	fmt.Println("8. Luas Lingkaran")
 	fmt.Println("9. Volume Tabung")
 	fmt.Println("10. Volume Balok ")
-	fmt.Println("11. Volume Prisma ") */
+	fmt.Println("11. Volume Prisma ") 
 	fmt.Print("Masukkan metode perhitungan yang diinginkan :   ")
 	fmt.Scan(&no)
 
@@ -40,7 +37,6 @@ func main() {
 	fmt.Print("Masukkan angka2 = ")
 	fmt.Scan(&No2)
   
-	//perhitungan := Hitung{No1, No2}
 	counting := Count{No1, No2}
 	
 
