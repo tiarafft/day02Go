@@ -1,7 +1,7 @@
 package main  
   
 import "fmt"  
-  
+//referensi dari internet
 func main() {  
  var operator string  
  var number1, number2 int  

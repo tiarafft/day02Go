@@ -2,19 +2,25 @@ package main
 
 import (
 	"fmt"
-	//"math"
+	"math"
+	//"strconv"
 	
 )
 
+type Point struct {
+	akar float64
+}
 
 
 type Count struct {
 	No1, No2 int
 }
 
+
 func main() {
 	
 	var no , No1, No2 int
+	var akar float64
 	
 
 	fmt.Println("Kalkulator")
@@ -32,25 +38,44 @@ func main() {
 	fmt.Print("Masukkan metode perhitungan yang diinginkan :   ")
 	fmt.Scan(&no)
 
-	fmt.Print("Masukkan angka1 = ")
-	fmt.Scan(&No1)
-	fmt.Print("Masukkan angka2 = ")
-	fmt.Scan(&No2)
   
 	counting := Count{No1, No2}
+	v := Point{akar}
 	
 
 	switch no {
 	case 1:
+		fmt.Print("Masukkan angka1 = ")
+		fmt.Scan(&No1)
+		fmt.Print("Masukkan angka2 = ")
+		fmt.Scan(&No2)
 		fmt.Println("Hasil:", counting.Perkalian())
+
 	case 2:
+		fmt.Print("Masukkan angka1 = ")
+		fmt.Scan(&No1)
+		fmt.Print("Masukkan angka2 = ")
+		fmt.Scan(&No2)
 		fmt.Println("Hasil:", counting.Pembagian())
+
 	case 3:
+		fmt.Print("Masukkan angka1 = ")
+		fmt.Scan(&No1)
+		fmt.Print("Masukkan angka2 = ")
+		fmt.Scan(&No2)
 		fmt.Println("Hasil:", counting.Pertambahan())
+
 	case 4:
+		fmt.Print("Masukkan angka1 = ")
+		fmt.Scan(&No1)
+		fmt.Print("Masukkan angka2 = ")
+		fmt.Scan(&No2)
 		fmt.Println("Hasil:", counting.Pengurangan())
+
 	case 5:
-	 // fmt.Println(" akar ", angka1, " = " ,akar)
+		fmt.Print("Masukkan akar = ")
+		fmt.Scan(&akar)
+		fmt.Println("Hasil:", v.Abs())
 	case 6:
 	 // fmt.Println(angka1, " pangkat ", angka2, " = " ,pangkat)
 	case 7:
@@ -87,4 +112,8 @@ func (h Count) Perkalian() int {
 
 func (h Count) Pembagian() int {
 	return h.No1 / h.No2
+}
+
+func (v Point) Abs() float64 {
+	return math.Sqrt(v.akar)
 }
