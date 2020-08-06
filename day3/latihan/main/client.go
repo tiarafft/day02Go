@@ -48,6 +48,7 @@ func main() {
 	baseURL := "http://localhost:9000"
 	method := "POST"
 	data := M{"Name": "Tiara Fauziah"}
+	//data := M{"Name": "Tiara Fauziah"}
 
 	responseBody, err := doRequest(baseURL+"/data", method, data)
 	if err != nil {
