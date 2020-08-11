@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package model;
+import "google/protobuf/Empty.proto";
+
+service SalesService{
+    rpc NewOrder(OrderProduct) returns (OutTransaction) {}
+    rpc ListOrder(google.protobuf.Empty) returns (OrderList){}
+    rpc Payment(InputPayment) returns (OutputPayment){}
+}
+
+message OrderProduct{
+    string idproduct = 1;
+}
+
+message Transaction{
+    string Idorder = 1;
+    string Idproduct = 2;
+    string Nameproduct = 3;
+    string Bill = 4;
+    string Status_Payment = 5;
+    string No_Tf = 6;
+}
+
+message OrderList{
+    repeated Transaction OrderList = 1;
+}
+
+message InputPayment{
+    string Idorder = 1;
+    string NoTransfer = 2;
+}
+
+message OutputPayment{
+    Transaction Transaction = 1;
+    string Message = 2;
+}
+
+message OutTransaction{
+    Transaction Transaction = 1;
+    string Message = 2;
+}
